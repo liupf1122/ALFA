@@ -1,0 +1,10 @@
+# Verified in conda environment aging; retain its existing CUDA-enabled PyTorch.
+torch>=2.4,<3
+numpy>=1.26,<3
+pandas>=2.2,<3
+SimpleITK>=2.4,<3
+nibabel>=5,<6
+scikit-learn>=1.5,<2
+scikit-image>=0.24,<1
+PyYAML>=6,<7
+tqdm>=4.66,<5

@@ -1,0 +1,264 @@
+{
+  "checked_at": "2026-11-05T15:01:41.100159+08:00",
+  "source_csv": "/mnt/sda/liupeifu/WorkSpace/Codes/datas/recommended_core4_i2_with_i3_T1_rigid.csv",
+  "source_unchanged": true,
+  "selected_columns": [
+    "IID",
+    "instance",
+    "mri_path",
+    "age",
+    "sex"
+  ],
+  "source_rows": 2286,
+  "subjects": 1143,
+  "missing": {
+    "IID": 0,
+    "instance": 0,
+    "mri_path": 0,
+    "age": 33,
+    "sex": 0
+  },
+  "real_data": {
+    "counts": {
+      "train": {
+        "scans": 1830,
+        "subjects": 915
+      },
+      "val": {
+        "scans": 228,
+        "subjects": 114
+      },
+      "test": {
+        "scans": 228,
+        "subjects": 114
+      }
+    },
+    "split_sha256": {
+      "train": "9879cdfdd0d146182dae3ae140d644b04fe6b0bdf93440cedb73be16a407655f",
+      "val": "27f6a7272e7ad5d0807b4c452fe431982d837fe2687f47541a284947b0aae070",
+      "test": "1ac43f4d681b3e42aa86ffeee81d0827248db350828e5a1417b5ee44f1c652bb"
+    },
+    "geometry_checked": false,
+    "source_csv": "/mnt/sda/liupeifu/WorkSpace/Codes/ALFA/ALFA2/v1/data/recommended_core4_i2_i3.csv",
+    "source_sha256": "5f3a54639cbe052aeadec49f0ee126cbf15aa730c1cbe187ad5b804c564893ad",
+    "seed": 42,
+    "missing_conditions": {
+      "age": 33,
+      "sex": 0
+    },
+    "split_policy": "person-level random split; ratios relative to all subjects; round val/test subject counts, train receives the remainder",
+    "split_ratios": {
+      "train": 0.8,
+      "val": 0.1,
+      "test": 0.1
+    }
+  },
+  "cache_audit": "docs/cache_audit_20261105.json",
+  "real_cache_hit_without_nifti_read": true,
+  "real_cache_xyz_to_zyx_exact": true,
+  "real_source_and_cache_stats_unchanged": true,
+  "model_conditions": [
+    "age",
+    "sex"
+  ],
+  "model_parameters": 692481,
+  "real_volume_shape_zyx": [
+    193,
+    229,
+    193
+  ],
+  "real_sampled_forward_shape": [
+    1,
+    8,
+    1
+  ],
+  "unit_tests": {
+    "passed": 30,
+    "failed": 0
+  },
+  "smoke_verification": "outputs/smoke_suite_seed42_20261105_155732_303036/verification.json",
+  "smoke_checks": [
+    "five-column IID/instance source preparation",
+    "lazy adjacent p999 cache creation",
+    "subject-disjoint splits",
+    "training + validation + best/last checkpoints",
+    "resume matches uninterrupted model and latent bitwise on CPU",
+    "reconstruction evaluation loads each scan once",
+    "i2-only longitudinal evaluation with persistence baseline",
+    "frozen decoder during latent fit",
+    "fixed-latent age edit and NIfTI geometry preservation",
+    "chunked prediction consistency",
+    "NIfTI affine, qform/sform codes and xyzt units retained",
+    "no-condition ablation train + evaluate"
+  ],
+  "real_training_started": true,
+  "cleanup_checked_at": "2026-11-05T15:25:00.476546+08:00",
+  "cleanup": {
+    "data_files_unchanged": true,
+    "removed_bytecode": [
+      {
+        "path": "src/__pycache__/prepare.cpython-310.pyc",
+        "bytes": 3614,
+        "sha256": "7386e2bc941c43b37c25288b9ebbf4438b1c594f790e01a536e2928780de2dcb"
+      },
+      {
+        "path": "src/__pycache__/evaluator.cpython-310.pyc",
+        "bytes": 5730,
+        "sha256": "c33fc5bf47e65c1ed4d2e2dd8dffb94dae4b2fa07422fee0691d39a71ea67c61"
+      },
+      {
+        "path": "src/__pycache__/dataset.cpython-310.pyc",
+        "bytes": 6715,
+        "sha256": "f2ac64813e98ff4ac60df839761d474202873f29082dea7042f4ec1769ff1dd9"
+      },
+      {
+        "path": "src/__pycache__/train.cpython-310.pyc",
+        "bytes": 6187,
+        "sha256": "08e8ef2daa39d4ce3582f59b22cb29545a6beab19988d2277139573450bef8dc"
+      },
+      {
+        "path": "src/__pycache__/model.cpython-310.pyc",
+        "bytes": 7886,
+        "sha256": "df10a204ee01d4359d8b976a889eaebb246e2b5b7780b74341e2a8efc573a407"
+      },
+      {
+        "path": "src/__pycache__/inference.cpython-310.pyc",
+        "bytes": 5656,
+        "sha256": "51bbfb3238afcb33f0c1fc52c1ea8b858b6e8817adfd7bc559a55c9f2735f212"
+      },
+      {
+        "path": "src/__pycache__/volume_cache.cpython-310.pyc",
+        "bytes": 5051,
+        "sha256": "90884e580cf5067ba9cb6e802c231a55227b8a87376fc0e96f37ee1c2f222d11"
+      },
+      {
+        "path": "src/__pycache__/smoke.cpython-310.pyc",
+        "bytes": 5741,
+        "sha256": "52cdcf2de4065aac04a9c0e558bef0dae0408a65acb0c04737700a221ac5c881"
+      },
+      {
+        "path": "src/__pycache__/config.cpython-310.pyc",
+        "bytes": 3122,
+        "sha256": "26279ade71ff115deaebc6f5791c81f6ed0ea65eeb9640d856cde259a9215281"
+      },
+      {
+        "path": "src/__pycache__/loss.cpython-310.pyc",
+        "bytes": 448,
+        "sha256": "99c3be2aefcfb7715d517146369639887ad8e05a6a5789bd03494b24e5272f42"
+      },
+      {
+        "path": "src/__pycache__/sampler.cpython-310.pyc",
+        "bytes": 923,
+        "sha256": "557de5af53bd6d757e34d324632f47788e65f2d669843a0a34ebff63ecb8f853"
+      },
+      {
+        "path": "src/__pycache__/__init__.cpython-310.pyc",
+        "bytes": 207,
+        "sha256": "be35692e668e5b4fb0b5491013c75596d53152d8f11b6bebf9815677c2afcaf7"
+      },
+      {
+        "path": "src/utils/__pycache__/runtime.cpython-310.pyc",
+        "bytes": 4945,
+        "sha256": "7697e1fc72eefded8144c798f2eaa4fe90cddf5ac9c3b0733fc0c2765cfed9c0"
+      },
+      {
+        "path": "src/utils/__pycache__/__init__.cpython-310.pyc",
+        "bytes": 162,
+        "sha256": "49a4f71c78a57891a4c484782797a6aa1db020c3e10f02b8213c6b78164709ab"
+      },
+      {
+        "path": "tests/__pycache__/test_contracts.cpython-310.pyc",
+        "bytes": 3411,
+        "sha256": "48f98c68c684c7922eed39bec3920b6bab00795cc8b92df01b947f90652bde81"
+      },
+      {
+        "path": "tests/__pycache__/test_cache.cpython-310.pyc",
+        "bytes": 5740,
+        "sha256": "fe5ef20003cfe7a89314c49adcb83dbe33179b6d55b2ff62d41dd0c8431b0c34"
+      }
+    ],
+    "removed_unused_imports": [
+      "src/evaluator.py:torch",
+      "src/model.py:Optional",
+      "src/smoke.py:deepcopy"
+    ],
+    "removed_dependency": "matplotlib",
+    "only_normalization": "p999",
+    "fixed_scale_checkpoints_rejected": true,
+    "real_cache_hit_without_nifti_read": true,
+    "real_cache_and_mri_unchanged": true,
+    "real_volume_min": 0.0,
+    "real_volume_max": 1.0,
+    "bytecode_files_remaining": 0
+  },
+  "one_command_entry": {
+    "checked_at": "2026-11-05T15:37:12.834810+08:00",
+    "cwd": "/tmp",
+    "command": "bash /mnt/sda/liupeifu/WorkSpace/Codes/ALFA/ALFA2/v1/scripts/train.sh --check-only",
+    "conda_environment": "aging",
+    "status": "ready",
+    "training_started": false,
+    "selected_device_at_check": "cuda:6",
+    "device_name": "NVIDIA GeForce RTX 4090",
+    "selection": "maximum currently free memory among visible CUDA devices",
+    "split_sha256": {
+      "train": "427a111b2c694526bc3288f00e5213321647574d15f7fa68d49d40cfb85b96a8",
+      "val": "af7cf492971dcdc200aef71fd84805541d8ac14d3ae0875fb514bca65d44a8f6",
+      "test": "0a179cb485303e9b8bb7be148c755d01ad84c982661e92c7a8c390eedda5f9ca"
+    }
+  },
+  "real_training_status": "user run failed before a completed epoch; bounded GPU repair probe passed; no formal restart",
+  "amp_fix": {
+    "checked_at": "2026-11-05T15:53:31.681751+08:00",
+    "report": "docs/amp_verification.json",
+    "smoke_verification": "outputs/smoke_suite_seed42_20261105_155215_524754/verification.json",
+    "unit_tests_passed": 27,
+    "gpu_updates": 5,
+    "gpu_skipped_batches": 1
+  },
+  "previous_split_real_data_audit": {
+    "counts": {
+      "train": {
+        "scans": 1026,
+        "subjects": 513
+      },
+      "val": {
+        "scans": 116,
+        "subjects": 58
+      },
+      "test": {
+        "scans": 1144,
+        "subjects": 572
+      }
+    },
+    "split_sha256": {
+      "train": "427a111b2c694526bc3288f00e5213321647574d15f7fa68d49d40cfb85b96a8",
+      "val": "af7cf492971dcdc200aef71fd84805541d8ac14d3ae0875fb514bca65d44a8f6",
+      "test": "0a179cb485303e9b8bb7be148c755d01ad84c982661e92c7a8c390eedda5f9ca"
+    },
+    "geometry_checked": true,
+    "source_csv": "/mnt/sda/liupeifu/WorkSpace/Codes/ALFA/ALFA2/v1/data/recommended_core4_i2_i3.csv",
+    "source_sha256": "5f3a54639cbe052aeadec49f0ee126cbf15aa730c1cbe187ad5b804c564893ad",
+    "seed": 42,
+    "missing_conditions": {
+      "age": 33,
+      "sex": 0
+    },
+    "split_policy": "person-level; longitudinal and single-visit strata; validation held out from training"
+  },
+  "split_update": {
+    "checked_at": "2026-11-05T15:58:41.493893+08:00",
+    "record": "docs/split_change_801010.json",
+    "training_started": false,
+    "check_only_status": "ready",
+    "unit_tests_passed": 30,
+    "smoke_verification": "outputs/smoke_suite_seed42_20261105_155732_303036/verification.json"
+  },
+  "progress_display": {
+    "checked_at": "2026-11-05T16:04:00.431370+08:00",
+    "unit_tests_passed": 30,
+    "smoke_verification": "outputs/smoke_suite_seed42_20261105_160130_986277/verification.json",
+    "train_and_validation_bars_completed": true,
+    "formal_training_started": false
+  }
+}

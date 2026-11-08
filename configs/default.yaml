@@ -1,0 +1,54 @@
+name: baseline
+seed: 42
+device: auto
+output_dir: outputs
+data:
+  source_csv: data/recommended_core4_i2_i3.csv
+  normalization: p999
+  cache_mode: adjacent
+  split_dir: data/splits
+  conditions: [age, sex]
+  train_ratio: 0.8
+  val_ratio: 0.1
+  test_ratio: 0.1
+model:
+  latent_channels: 128
+  latent_spatial: [3, 3, 3]
+  backbone_hidden_features: 256
+  backbone_hidden_layers: 5
+  backbone_first_omega: 15.0
+  backbone_hidden_omega: 15.0
+  head_hidden_features: 256
+  head_num_layers: 6
+  head_omega: 45.0
+  head_out_size: 1
+  residual_enabled: false
+  residual_layers: 3
+  residual_omega: 50.0
+train:
+  epochs: 1000
+  batch_size: 8
+  points: 51200
+  num_workers: 4
+  network_lr: 0.0001
+  latent_lr: 0.001
+  lr_step: 20
+  lr_gamma: 0.5
+  mixed_precision: true
+  grad_clip: 1.0
+  patience: 80
+  min_delta: 0.0001
+  save_every: 100
+validation:
+  every: 1
+  max_samples: 8
+  fit_steps: 100
+  fit_points: 16384
+  fit_lr: 0.01
+inference:
+  fit_steps: 300
+  fit_points: 51200
+  fit_lr: 0.01
+  chunk_size: 65536
+  data_range: 1.0
+  foreground_threshold: 0.05

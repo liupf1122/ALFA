@@ -1,0 +1,68 @@
+{
+  "checked_at": "2026-11-05T15:51:37.002863+08:00",
+  "status": "passed",
+  "device": "cuda:6",
+  "device_name": "NVIDIA GeForce RTX 4090",
+  "torch": "2.4.1+cu124",
+  "scope": "bounded real MRI GPU backward/Adam verification; not a full epoch or scientific training",
+  "batch_size": 8,
+  "points": 51200,
+  "model_parameters": 692481,
+  "num_workers_for_probe": 0,
+  "updates": 5,
+  "skipped": 1,
+  "events": [
+    {
+      "batch": 1,
+      "mae": 0.1382279396057129,
+      "updated": true,
+      "previous_scale": 65536.0,
+      "scale": 65536.0
+    },
+    {
+      "batch": 2,
+      "mae": 0.20158642530441284,
+      "updated": false,
+      "previous_scale": 65536.0,
+      "scale": 32768.0
+    },
+    {
+      "batch": 3,
+      "mae": 0.20000311732292175,
+      "updated": true,
+      "previous_scale": 32768.0,
+      "scale": 32768.0
+    },
+    {
+      "batch": 4,
+      "mae": 0.14830780029296875,
+      "updated": true,
+      "previous_scale": 32768.0,
+      "scale": 32768.0
+    },
+    {
+      "batch": 5,
+      "mae": 0.18481571972370148,
+      "updated": true,
+      "previous_scale": 32768.0,
+      "scale": 32768.0
+    },
+    {
+      "batch": 6,
+      "mae": 0.14253151416778564,
+      "updated": true,
+      "previous_scale": 32768.0,
+      "scale": 32768.0
+    }
+  ],
+  "parameters_finite": true,
+  "model_and_latents_updated": true,
+  "seconds": 3.6601674035191536,
+  "peak_allocated_gib": 5.11732816696167,
+  "split_sha256": {
+    "train": "427a111b2c694526bc3288f00e5213321647574d15f7fa68d49d40cfb85b96a8",
+    "val": "af7cf492971dcdc200aef71fd84805541d8ac14d3ae0875fb514bca65d44a8f6",
+    "test": "0a179cb485303e9b8bb7be148c755d01ad84c982661e92c7a8c390eedda5f9ca"
+  },
+  "train_code_sha256": "dc913c9528097cd9cf9e39b06234680c152b47ae1e05338ea9ef98a55ac123da"
+}

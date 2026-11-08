@@ -1,0 +1,64 @@
+{
+  "source": "/mnt/sda/liupeifu/WorkSpace/Codes/datas/recommended_core4_i2_with_i3_T1_rigid.csv",
+  "source_sha256": "435267dc3f3acec86201fdb94b173993fc1d7739e669003a39a61431eabb6f07",
+  "columns": [
+    "IID",
+    "instance",
+    "mri_path",
+    "age",
+    "sex"
+  ],
+  "rows": 2286,
+  "subjects": 1143,
+  "missing": {
+    "IID": 0,
+    "instance": 0,
+    "mri_path": 0,
+    "age": 33,
+    "sex": 0
+  },
+  "deleted_data_files": [
+    {
+      "path": "README.md",
+      "symlink": false,
+      "bytes": 2315,
+      "sha256": "5fa0add30d551e707dbb19acd201c0d9fc4814c4ba9712bb8d01a9293a82a49c"
+    },
+    {
+      "path": "migration.json",
+      "symlink": false,
+      "bytes": 610,
+      "sha256": "e2a4c2982b9ea99b70964e0a868521487949d48d54e2a84cfeaec2fd68981900"
+    },
+    {
+      "path": "qc_rigid_registration.csv",
+      "symlink": false,
+      "bytes": 169084,
+      "sha256": "1236462ad63c0b19b3543702e13babc1ad796196823c683754648673ce677ff7"
+    },
+    {
+      "path": "splits/manifest.json",
+      "symlink": false,
+      "bytes": 6212,
+      "sha256": "93626ab56c8d55c7af1ad6da6c1ea229d3a869fee0abfd88357c28eab74a13a3"
+    },
+    {
+      "path": "splits/test.csv",
+      "symlink": false,
+      "bytes": 97907,
+      "sha256": "7bd5c192f12f764a5bbb50ed2a7544064be2ac9e0aa790271b3665879d25c9b3"
+    },
+    {
+      "path": "splits/train.csv",
+      "symlink": false,
+      "bytes": 420113,
+      "sha256": "5ad9aec7322c8c9f5833870b9cf572abf2ebaa4909ada8b0b557162c9adef1cc"
+    },
+    {
+      "path": "splits/val.csv",
+      "symlink": false,
+      "bytes": 47219,
+      "sha256": "25ff83e40cd1e01558754d2501eaddf37ae9a528b0094cc555b64077778b9749"
+    }
+  ]
+}

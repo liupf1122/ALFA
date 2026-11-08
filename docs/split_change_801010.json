@@ -1,0 +1,43 @@
+{
+  "changed_at": "20261105_155721",
+  "seed": 42,
+  "ratios": {
+    "train": 0.8,
+    "val": 0.1,
+    "test": 0.1
+  },
+  "previous_splits_archive": "/mnt/sda/liupeifu/WorkSpace/Codes/ALFA/ALFA2/v1/data/splits_history/20261105_155721",
+  "previous_file_sha256": {
+    "test.csv": "0a179cb485303e9b8bb7be148c755d01ad84c982661e92c7a8c390eedda5f9ca",
+    "manifest.json": "8b9475f10a9f48b387288b356a55c73ad5d2748ba137d3884ab5c5ef7abf2a61",
+    "train.csv": "427a111b2c694526bc3288f00e5213321647574d15f7fa68d49d40cfb85b96a8",
+    "val.csv": "af7cf492971dcdc200aef71fd84805541d8ac14d3ae0875fb514bca65d44a8f6"
+  },
+  "current": {
+    "counts": {
+      "train": {
+        "scans": 1830,
+        "subjects": 915
+      },
+      "val": {
+        "scans": 228,
+        "subjects": 114
+      },
+      "test": {
+        "scans": 228,
+        "subjects": 114
+      }
+    },
+    "split_sha256": {
+      "train": "9879cdfdd0d146182dae3ae140d644b04fe6b0bdf93440cedb73be16a407655f",
+      "val": "27f6a7272e7ad5d0807b4c452fe431982d837fe2687f47541a284947b0aae070",
+      "test": "1ac43f4d681b3e42aa86ffeee81d0827248db350828e5a1417b5ee44f1c652bb"
+    },
+    "geometry_checked": false
+  },
+  "source_sha256": "5f3a54639cbe052aeadec49f0ee126cbf15aa730c1cbe187ad5b804c564893ad",
+  "source_unchanged": true,
+  "all_scans_preserved": true,
+  "paired_visits_together": true,
+  "missing_age_preserved": 33
+}

@@ -1,0 +1,20 @@
+{
+  "counts": {
+    "images": 2286,
+    "cache_arrays": 2286,
+    "cache_metadata": 2286,
+    "foreground_arrays": 2286,
+    "valid_source_metadata": 2286
+  },
+  "array_shapes_xyz": [
+    [
+      193,
+      229,
+      193
+    ]
+  ],
+  "normalizations": [
+    "clip(raw / percentile(raw[raw>0],99.9),0,1)"
+  ],
+  "invalid": []
+}

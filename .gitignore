@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.env
+outputs/
+*.pt
+*.pth
+*.npy
+*.nii
+*.nii.gz
+# Local cohort manifests contain subject identifiers/phenotypes; do not publish.
+data/splits/*.csv
+data/splits/manifest.json
+data/*.csv
